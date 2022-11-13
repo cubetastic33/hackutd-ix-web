@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HackUTD IX - Web Demo</title>
+  <link rel="stylesheet" href="/styles/main.scss">
+</head>
+<body>
+  <dialog>
+    <h1 class="center">Active Amber Alerts</h1>
+    <p class="center">
+      HackUTD IX project created by Amrit, Aravindan, Charlie, and Tim!
+    </p>
+    <br>
+    <p>
+      All the amber alerts in the database are listed on the left, and clicking on zooms to it on
+      the map. All the sightings in the vicinity of this alert are drawn on the map, and exiting
+      that alert's detailed view removes the sightings.
+    </p>
+    <p>
+      Sighting data is pulled from dashcam footage of cars, using a neural network to identify cars
+      on the road. If a car is spotted as a potential suspect, the data is sent and stored in the
+      server. It will then show up in this interface, so you can track possible locations of the
+      suspected car.
+    </p>
+  </dialog>
+  <div class="overlay"></div>
+  <header><h1>Active Amber Alerts</h1></header>
+  <main>
+    <div id="left">
+      <ul id="alerts"></ul>
+      <div id="expanded">
+        <button id="back">←&nbsp;&nbsp;&nbsp;Back</button>
+        <h1></h1>
+        <div class="age"><b>Age:</b><span></span></div>
+        <div class="gender"><b>Gender:</b><span></span></div>
+        <div class="race"><b>Race:</b><span></span></div>
+        <br>
+        <div class="car_color"><b>Car color:</b><span></span></div>
+        <div class="car_make"><b>Car make:</b><span></span></div>
+        <div class="car_model"><b>Car model:</b><span></span></div>
+        <div class="car_year"><b>Car year:</b><span></span></div>
+        <div class="car_plate"><b>License plate:</b><span></span></div>
+        <br>
+        <div class="location"><b>Location:</b><span></span></div>
+      </div>
+    </div>
+    <div id="map"></div>
+  </main>
+  <template id="alert">
+    <li class="alert">
+      <h1></h1>
+      <div class="age"><b>Age:</b><span></span></div>
+      <div class="gender"><b>Gender:</b><span></span></div>
+      <div class="race"><b>Race:</b><span></span></div>
+      <br>
+      <div class="car_color"><b>Car color:</b><span></span></div>
+      <div class="car_plate"><b>Plate:</b><span></span></div>
+    </li>
+  </template>
+</body>
+<script src="/scripts/main.ts" type="module"></script>
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "hackutd-ix-web",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.html",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cubetastic33/hackutd-ix-web.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cubetastic33/hackutd-ix-web/issues"
+  },
+  "homepage": "https://github.com/cubetastic33/hackutd-ix-web#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.0",
+    "@types/node": "^18.11.9",
+    "parcel": "^2.8.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "@turf/turf": "^6.5.0",
+    "mapbox-gl": "^2.10.0"
+  }
+}
